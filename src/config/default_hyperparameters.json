@@ -1,0 +1,5 @@
+{
+  "nr_freqs_to_keep": 10,
+  "trend": "poly",
+  "trend_poly_degree": 3
+}
