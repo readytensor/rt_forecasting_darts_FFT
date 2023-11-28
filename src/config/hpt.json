@@ -2,10 +2,26 @@
   "num_trials": 5,
   "hyperparameters": [
     {
-      "name": "seasonal_periods",
-      "short_desc": "The number of periods in a complete seasonal cycle, e.g., 4 for quarterly data or 7 for daily data with a weekly cycle. If not set, inferred from frequency of the series.",
+      "name": "nr_freqs_to_keep",
+      "short_desc": "The total number of frequencies that will be used for forecasting.",
       "type": "int",
-      "range_low": 0,
+      "search_type": "uniform",
+      "range_low": 10,
+      "range_high": 15
+    },
+    {
+      "name": "trend",
+      "short_desc": "If set, indicates what kind of detrending will be applied before performing DFT. Possible values: 'poly', 'exp' or None, for polynomial trend, exponential trend or no trend, respectively.",
+      "type": "categorical",
+      "categories": ["poly", "exp"],
+      "default": "poly"
+    },
+    {
+      "name": "trend_poly_degree",
+      "short_desc": "The degree of the polynomial that will be used for detrending, if trend='poly'.",
+      "type": "int",
+      "search_type": "uniform",
+      "range_low": 1,
       "range_high": 5
     }
   ]
