@@ -47,7 +47,7 @@ class Forecaster:
 
     def map_frequency(self, frequency: str) -> str:
         """
-        Maps the frequency in the data schema to the frequency expected by Prophet.
+        Maps the frequency in the data schema to the frequency expected by Forecaster.
 
         Args:
             frequency (str): The frequency from the schema.
